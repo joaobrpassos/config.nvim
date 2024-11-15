@@ -45,4 +45,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- set caps lock to esc
+
+vim.keymap.set('n', '<CapsLock>', '<Esc>')
+vim.keymap.set('i', '<CapsLock>', '<Esc>')
+vim.keymap.set('v', '<CapsLock>', '<Esc>')
+
 -- vim: ts=2 sts=2 sw=2 et

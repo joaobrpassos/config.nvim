@@ -28,6 +28,7 @@ return {
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
+      'mrcjkb/rustaceanvim',
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -178,8 +179,7 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+        pyright = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -235,5 +235,11 @@ return {
       }
     end,
   },
+  setup = {
+    rust_analyzer = function()
+      return true
+    end,
+  },
 }
+
 -- vim: ts=2 sts=2 sw=2 et
