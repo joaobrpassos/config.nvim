@@ -29,6 +29,7 @@ return {
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
       'mrcjkb/rustaceanvim',
+      'bergercookie/asm-lsp',
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -212,6 +213,7 @@ return {
       --
       --  You can press `g?` for help in this menu.
       require('mason').setup()
+      require('lspconfig').asm_lsp.setup {}
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
